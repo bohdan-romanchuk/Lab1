@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    background: #cdcbcb;
+
+    padding: 20px;
+}
+
+.container {
+    width: 1127px;
+
+    padding-top: 100px;
+    margin: auto;
+}
+
+.left-container {
+    width: 68.75%;
+
+    display: inline-block;
+    box-sizing: border-box;
+
+    padding: 14px;
+    margin: 0;
+}
+
+.left-sub {
+    width: 100%;
+    height: 100%;
+
+    background: white;
+    
+    border: 0.5px solid rgba(34,36,38,.15);
+    border-radius: 4px;
+}
+
+.right-container {
+    width: 30.25%;
+
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+
+    padding: 14px;
+    margin: 0;
+}
+
+.right-sub {
+    background: white;
+    width: 100%;
+    
+    border: 0.5px solid rgba(34,36,38,.15);
+    border-radius: 4px;
+}
+
+/*add bar*/
+.add-row {
+    padding: 14px;
+    
+    border-radius: 4px 4px 0px 0px;
+}
+
+.input {
+    width: 589px!important;
+
+    display: inline-block;
+
+    padding: 9px 14px;
+
+    border: 1px solid rgba(34,36,38,.15);
+    border-right: 0;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.add-button {
+    width: 100px;
+    height: 35px;
+    float: right;
+
+    color: #FFF;
+
+    background-color: #2185D0;
+    
+    border-radius: 0px 4px 4px 0px;
+    border: 0;
+}
+
+.row {
+    border-top: 0.1px solid rgba(34,36,38,.15);
+}
+
+/* product divs */
+.bl-product {
+    width: 35%;
+
+    display: inline-block;
+
+    padding: 14px;
+}
+
+.bl-count {
+    display: inline-block;
+
+    padding: 7px 14px 0px;
+}
+
+.bl-buttons {
+    float: right;
+    padding: 7px 14px 0px;
+}
+
+
+/*right column*/
+.bl-title {
+    font-size: 16px;
+    font-weight: 700;
+
+    padding: 14px;
+    border-bottom: 0.1px solid rgba(34,36,38,.15);
+}
+
+.bl-content {
+    padding: 14px;
+    border-bottom: 0.1px solid rgba(34,36,38,.15);
+}
+
+#last-content {
+    border-bottom: 0;
+}
+
+.pr-label {
+    font-size: 9px;
+
+    background-color: #cdcbcb;
+
+    padding: 6px;
+    border-radius: 4px;
+    margin-right: 2px;
+}
+
+.pr-number {
+    color: white;
+
+    background-color: #F2711C!important;
+
+    padding: 2px 4.5px 2px 4.5px;
+    border-radius: 50%;
+}
+
+/*Кнопки*/
+.bl-label {
+    vertical-align: middle;
+
+    font-size: 12px;
+
+    background-color: #cdcbcb;
+
+    padding: 9px 12px 7px 12px;
+    border-radius: 4px;
+}
+
+.bl-plus {
+    width: 30px;
+    height: 30px;
+
+    color: white;
+    font-weight: 800;
+
+    background-color: #21BA45;
+
+    border: 0;
+    border-radius: 50%;
+}
+
+.bl-minus {
+    width: 30px;
+    height: 30px;
+
+    color: white;
+    font-weight: 800;
+
+    background-color: #DB2828;
+
+    border: 0;
+    border-radius: 50%;
+}
+
+.bl-bought {
+    width: 80px;
+    height: 30px;
+
+    font-size: 10px;
+
+    border: 0.1px solid rgba(34,36,38,.15);
+    border-radius: 4px;
+}
+
+.bl-delete {
+    width: 30px;
+    height: 30px;
+
+    font-size: 10px;
+    font-weight: 800;
+    color: white;
+
+    background-color: #DB2828;
+
+    border: 0;
+    border-radius: 4px;
+}
