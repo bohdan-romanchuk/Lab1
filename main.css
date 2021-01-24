@@ -1,30 +1,35 @@
 body {
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 
     background: #cdcbcb;
 
-    padding: 20px;
+    padding: 0px;
+    margin: 14px;
 }
 
 .container {
-    width: 1127px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1127px;
 
     padding-top: 100px;
     margin: auto;
 }
 
 .left-container {
+    box-sizing: border-box;
     width: 68.75%;
 
-    display: inline-block;
-    box-sizing: border-box;
+    float: left;
 
     padding: 14px;
     margin: 0;
 }
 
 .left-sub {
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
 
@@ -35,17 +40,18 @@ body {
 }
 
 .right-container {
-    width: 30.25%;
+    box-sizing: border-box;
+    width: 31.25%;
 
     vertical-align: top;
-    display: inline-block;
-    box-sizing: border-box;
+    float: right;
 
     padding: 14px;
     margin: 0;
 }
 
 .right-sub {
+    box-sizing: border-box;
     background: white;
     width: 100%;
     
@@ -56,14 +62,20 @@ body {
 /*add bar*/
 .add-row {
     padding: 14px;
-    
     border-radius: 4px 4px 0px 0px;
 }
 
-.input {
-    width: 589px!important;
+.clearfix::after {
+    visibility: hidden;	
+    display: block;
+    content: "";	 
+    height: 0;	 
+    clear: both;	
+}
 
-    display: inline-block;
+.input {
+    box-sizing: border-box;
+    width: 85%!important;
 
     padding: 9px 14px;
 
@@ -73,7 +85,8 @@ body {
 }
 
 .add-button {
-    width: 100px;
+    box-sizing: border-box;
+    width: 15%;
     height: 35px;
     float: right;
 
@@ -89,23 +102,65 @@ body {
     border-top: 0.1px solid rgba(34,36,38,.15);
 }
 
+[data-tooltip] {
+    position: relative; 
+}
+[data-tooltip]::after {
+    box-sizing: border-box;
+    content: attr(data-tooltip); 
+    
+    width: 100px; 
+    height: 0px;
+    
+    position: absolute; /* Абсолютное позиционирование */
+    right: -100%;
+    left: -100%;
+
+    margin:	auto;
+    bottom:	35px;
+    
+    font-size: 12px;
+    font-weight: 700;
+
+    background: #6a0074; 
+    color: #fff; 
+    
+    opacity: 0;
+    transition: 0.3s;
+
+    border-radius: 8px;
+    z-index: 100;
+} 
+[data-tooltip]:hover::after {
+    padding-top: 5px;
+    height: 25px;
+    opacity: 1;
+}
+
 /* product divs */
 .bl-product {
-    width: 35%;
+    box-sizing: border-box;
+    width: 25%;
 
-    display: inline-block;
+    float: left;
 
     padding: 14px;
 }
 
 .bl-count {
+    box-sizing: border-box;
     display: inline-block;
+    text-align: center;
+    width: 37.5%;
 
     padding: 7px 14px 0px;
 }
 
 .bl-buttons {
+    box-sizing: border-box;
     float: right;
+    text-align: right;
+    width: 37.5%;
     padding: 7px 14px 0px;
 }
 
@@ -129,13 +184,16 @@ body {
 }
 
 .pr-label {
+    box-sizing: border-box;
     font-size: 9px;
 
+    display: inline-block;
     background-color: #cdcbcb;
 
     padding: 6px;
     border-radius: 4px;
-    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .pr-number {
@@ -207,4 +265,69 @@ body {
 
     border: 0;
     border-radius: 4px;
+}
+
+.nametag {
+    position: fixed;
+    height: 20px;
+    bottom:	0px;
+    left:	20px;
+
+    color: white;
+    background-color: #5f004f;
+    
+    padding: 10px;
+    border-radius: 4px 4px 0px 0px;
+    transition:	all	1s	ease;
+}
+
+.nametag:hover{
+    background-color: #2185D0;
+    height: 55px;
+}
+
+#nametag-header{
+    font-size: 16px;
+    font-weight: 800;
+
+    margin-bottom: 5px;
+}
+
+@media	print	{
+    #nametag-header{
+        display: none;
+    }
+    .nametag {
+        padding-top: 5px;
+        height: 25px;
+
+        background-color: white;
+        color: grey;
+        border: 1px solid grey;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        padding: 0px;
+    }
+    body {
+        padding: 0px;
+    }
+    .container	{
+        width: 100%;
+        min-width: 290px;
+        margin: auto;
+    }
+    .left-container {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .right-container {
+        width: 100%;
+        
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
