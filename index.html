@@ -1,100 +1,67 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="uk">
     <meta charset="UTF-8">
     <title>My Page</title>
-
-
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
-    <body>
-            <div class="container">
-                <div class="left-container">
-                    <div class="left-sub">
-                        <div class="add-row clearfix">
-                            <input class="input" type="text" placeholder="Назва товару">
-                            <button class="add-button" data-tooltip="blue button">Додати</button>
-                        </div>
-                        <div class="list">
-                            <div class="row clearfix">
-                                <div class="bl-product">
-                                    Помідори
-                                </div>
-                                <div class="bl-count">
-                                    <button class="bl-minus" data-tooltip="red button">-</button>
-                                    <span class="bl-label">3</span>
-                                    <button class="bl-plus" data-tooltip="green button">+</button>
-                                </div>
-                                <div class="bl-buttons">
-                                    <button class="bl-bought" data-tooltip="grey button">Куплено</button>
-                                    <button class="bl-delete" data-tooltip="red button">×</button>
-                                </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="bl-product">
-                                    Печиво
-                                </div>
-                                <div class="bl-count">
-                                    <button class="bl-minus" data-tooltip="red button">-</button>
-                                    <span class="bl-label">3</span>
-                                    <button class="bl-plus" data-tooltip="green button">+</button>
-                                </div>
-                                <div class="bl-buttons">
-                                    <button class="bl-bought" data-tooltip="grey button">Куплено</button>
-                                    <button class="bl-delete" data-tooltip="red button">×</button>
-                                </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="bl-product">
-                                    Сир
-                                </div>
-                                <div class="bl-count">
-                                    <button class="bl-minus" data-tooltip="red button">-</button>
-                                    <span class="bl-label">3</span>
-                                    <button class="bl-plus" data-tooltip="green button">+</button>
-                                </div>
-                                <div class="bl-buttons">
-                                    <button class="bl-bought" data-tooltip="grey button">Куплено</button>
-                                    <button class="bl-delete" data-tooltip="red button">×</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-container">
-                    <div class="right-sub">
-                        <div class="bl-title">Залишилося</div>
-                        <div class="bl-content">
-                            <div class="pr-label">
-                                Помідори
-                                <span class="pr-number">1</span>
-                            </div>
-                            <div class="pr-label">
-                                Печиво
-                                <span class="pr-number">1</span>
-                            </div>
-                            <div class="pr-label">
-                                Сир
-                                <span class="pr-number">1</span>
-                            </div>
-                        </div>
-                        <div class="bl-title">Куплено</div>
-                        <div class="bl-content" id="last-content">
 
-                        </div>
-                    </div>
-                    
+<body>
+    <div class="container">
+        <div class="left-container">
+            <div class="left-sub">
+                <div class="add-row clearfix">
+                    <input class="input" type="text" placeholder="Назва товару">
+                    <button class="add-button" data-tooltip="blue button">Додати</button>
                 </div>
-                <div class="nametag">
-                    <div id="nametag-header">Buy List<br></div>
-                    <div id="creator">
-                        <span style="font-size: 10px;">Created by<br></span>
-                        <span style="font-size: 13px;">Romanchuk</span>
+                <div class="list">
+                    <div class="row-container">
+                        <div class="row clearfix">
+                            <div class="bl-product">
+                                <span id="plc" onclick="editTitle(this)">Помідори</span>
+                            </div>
+                            <div class="bl-count">
+                                <button class="bl-minus" data-tooltip="red button">-</button>
+                                <div class="bl-label">1</div>
+                                <button class="bl-plus" data-tooltip="green button">+</button>
+                            </div>
+                            <div class="bl-buttons">
+                                <button class="bl-bought" data-tooltip="grey button">Куплено</button>
+                                <button class="bl-delete" data-tooltip="red button">×</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            
+        </div>
+        <div class="right-container">
+            <div class="right-sub">
+                <div class="bl-title">Залишилося</div>
+                <div class="bl-content" id="remain">
+                    <div class="pr-label-container">
+                        <div class="pr-label">
+                            <span class="pr-title">Помідори</span>
+                            <span class="pr-number">1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bl-title">Куплено</div>
+                <div class="bl-content" id="bought">
+                </div>
+            </div>
 
-    </body>
+        </div>
+        <div class="nametag">
+            <div id="nametag-header">Buy List<br></div>
+            <div id="creator">
+                <span style="font-size: 10px;">Created by<br></span>
+                <span style="font-size: 13px;">Romanchuk</span>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript"src="main.js"> </script>
+</body>
+
 </html>
