@@ -61,6 +61,9 @@ body {
 
 /*add bar*/
 .add-row {
+    box-sizing: border-box;
+    display: inline-flex;
+    width: 100%;
     padding: 14px;
     border-radius: 4px 4px 0px 0px;
 }
@@ -74,26 +77,28 @@ body {
 }
 
 .input {
+    display: inline-flex;
     box-sizing: border-box;
-    width: 85%!important;
-
-    padding: 9px 14px;
-
+    flex: 1 0 auto;
+    line-height: 1.2142em;
+    padding: .67861429em 1em;
     border: 1px solid rgba(34,36,38,.15);
     border-right: 0;
     border-radius: 4px 0px 0px 4px;
+    min-width: 100px;
 }
 
 .add-button {
     box-sizing: border-box;
-    width: 15%;
-    height: 35px;
+    right: 0;
     float: right;
-
-    color: #FFF;
-
     background-color: #2185D0;
-    
+    color: #FFF;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1rem;
+    flex: 0 0 auto;
+    width: 100px;
     border-radius: 0px 4px 4px 0px;
     border: 0;
 }
@@ -294,7 +299,7 @@ body {
     }
     .container	{
         width: 100%;
-        min-width: 290px;
+        min-width: 327px;
         margin: auto;
     }
     .left-container {
